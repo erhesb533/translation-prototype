@@ -4,6 +4,7 @@ import { BusinessScreen } from './screens/Business'
 import { Home } from './screens/Home'
 import { OrderScreen } from './screens/Order'
 import { StatusScreen } from './screens/Status'
+import { TranslatorScreen } from './screens/Translator'
 
 export default function App() {
   const route = useRoute()
@@ -17,6 +18,9 @@ export default function App() {
       break
     case 'business':
       screen = <BusinessScreen />
+      break
+    case 'translator':
+      screen = <TranslatorScreen />
       break
     default:
       screen = <Home />
