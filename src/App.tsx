@@ -1,4 +1,5 @@
 import { Layout } from './components/Layout'
+import { InterviewMode } from './interview/InterviewMode'
 import { useRoute } from './router'
 import { BusinessScreen } from './screens/Business'
 import { Home } from './screens/Home'
@@ -25,5 +26,10 @@ export default function App() {
     default:
       screen = <Home />
   }
-  return <Layout route={route}>{screen}</Layout>
+  return (
+    <>
+      <Layout route={route}>{screen}</Layout>
+      <InterviewMode route={route} />
+    </>
+  )
 }

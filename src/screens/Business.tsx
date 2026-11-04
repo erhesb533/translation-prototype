@@ -100,41 +100,27 @@ export function BusinessScreen() {
 
       <div className="card">
         <h2>Захиалгууд</h2>
-        <div className="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Дугаар / файл</th>
-                <th>Хэл · түвшин</th>
-                <th>Төлөв</th>
-                <th className="num">Дүн</th>
-              </tr>
-            </thead>
-            <tbody>
-              {orders.map((o) => (
-                <tr key={o.id}>
-                  <td>
-                    <strong>{o.id}</strong>
-                    <div className="muted small">{o.fileName}</div>
-                    <div className="muted small">
-                      {formatDate(o.createdAt)} · {o.requester}
-                    </div>
-                  </td>
-                  <td className="small">
-                    {pairLabel(findPair(o.pair))}
-                    <div className="muted">{tierShort(o.tier)}</div>
-                  </td>
-                  <td>
-                    <span className={o.stage === 'ready' ? 'badge badge-accent' : 'badge'}>
-                      {STAGE_LABELS[o.stage]}
-                    </span>
-                  </td>
-                  <td className="num">{formatMNT(o.total)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ul className="list">
+          {orders.map((o) => (
+            <li key={o.id}>
+              <div className="spread">
+                <strong>{o.id}</strong>
+                <span className={o.stage === 'ready' ? 'badge badge-accent' : 'badge'}>
+                  {STAGE_LABELS[o.stage]}
+                </span>
+              </div>
+              <div className="small ellipsis">{o.fileName}</div>
+              <div className="spread">
+                <span className="muted small">
+                  {pairLabel(findPair(o.pair))} · {tierShort(o.tier)}
+                  <br />
+                  {formatDate(o.createdAt)} · {o.requester}
+                </span>
+                <strong className="nowrap">{formatMNT(o.total)}</strong>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="card">
