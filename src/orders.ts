@@ -53,3 +53,5 @@ export function formatDate(d: Date | string): string {
   const pad = (n: number) => String(n).padStart(2, '0')
   return `${x.getFullYear()}.${pad(x.getMonth() + 1)}.${pad(x.getDate())}`
 }
+
+export const nowISO = () => new Date().toISOString()

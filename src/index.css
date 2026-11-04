@@ -386,3 +386,64 @@ section.grid {
 .how li {
   margin-bottom: 4px;
 }
+
+/* Захиалга */
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 4px;
+}
+.segmented label {
+  cursor: pointer;
+}
+.segmented input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.segmented span {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.segmented input:checked + span {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.segmented input:focus-visible + span {
+  outline: 2px solid var(--primary);
+}
+.dropzone {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 18px;
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+.dropzone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.dropzone-icon {
+  font-size: 1.8rem;
+}
+.quote {
+  border: 2px solid var(--primary);
+}
+.total-row td {
+  font-weight: 800;
+  font-size: 1.15rem;
+  border-bottom: 0;
+}
