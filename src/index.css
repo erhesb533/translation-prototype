@@ -341,3 +341,48 @@ th {
   color: var(--muted);
   padding: 24px 8px;
 }
+
+/* Нүүр */
+.hero h1 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+.value {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0;
+}
+.value-icon {
+  font-size: 1.5rem;
+}
+.value p {
+  margin: 0;
+}
+.grid + .card,
+section.grid {
+  margin-bottom: 16px;
+}
+.tier {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.tier-title {
+  font-weight: 700;
+}
+.tier-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 4px 0;
+}
+.badge-muted {
+  background: var(--line);
+  color: var(--muted);
+}
+.how ol {
+  padding-left: 1.2rem;
+  margin: 0 0 12px;
+}
+.how li {
+  margin-bottom: 4px;
+}
