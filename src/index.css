@@ -447,3 +447,64 @@ section.grid {
   font-size: 1.15rem;
   border-bottom: 0;
 }
+
+/* Төлөв */
+.block {
+  display: block;
+}
+.stepper {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  position: relative;
+}
+.stepper li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  position: relative;
+  color: var(--muted);
+}
+.stepper li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+.stepper li.done::before {
+  background: var(--accent);
+}
+.stepper .dot {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.stepper li.done {
+  color: var(--text);
+}
+.stepper li.done .dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.stepper li.current {
+  color: var(--text);
+}
+.stepper li.current .dot {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.demo-btn {
+  border-style: dashed;
+}
