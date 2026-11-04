@@ -1,5 +1,6 @@
 import { Layout } from './components/Layout'
 import { useRoute } from './router'
+import { BusinessScreen } from './screens/Business'
 import { Home } from './screens/Home'
 import { OrderScreen } from './screens/Order'
 import { StatusScreen } from './screens/Status'
@@ -13,6 +14,9 @@ export default function App() {
       break
     case 'status':
       screen = <StatusScreen id={route.id} />
+      break
+    case 'business':
+      screen = <BusinessScreen />
       break
     default:
       screen = <Home />

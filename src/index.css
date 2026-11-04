@@ -508,3 +508,28 @@ section.grid {
 .demo-btn {
   border-style: dashed;
 }
+
+/* Компанийн самбар */
+.stats .card {
+  margin-bottom: 0;
+  padding: 12px 16px;
+}
+.stats {
+  margin-bottom: 16px;
+}
+.glossary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+.glossary-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+@media (min-width: 640px) {
+  .glossary-form {
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
+}
